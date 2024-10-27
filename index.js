@@ -178,12 +178,12 @@ class App{
     const f_path = `${TMP_FOLDER}/${name}`;
 
     if(w < VRC_MAX && h < VRC_MAX){
-      await sharp(path).webp(WEBP_OPT).toFile(f_path);
+      await sharp(path).keepIccProfile().webp(WEBP_OPT).toFile(f_path);
     }else{
       if(w < h){
-        await sharp(path).resize(null, VRC_MAX).webp(WEBP_OPT).toFile(f_path);
+        await sharp(path).resize(null, VRC_MAX).keepIccProfile().webp(WEBP_OPT).toFile(f_path);
       }else{
-        await sharp(path).resize(VRC_MAX).webp(WEBP_OPT).toFile(f_path);
+        await sharp(path).resize(VRC_MAX).keepIccProfile().webp(WEBP_OPT).toFile(f_path);
       }
     }
 
