@@ -24,6 +24,10 @@ const {
 } = require('./config.json');
 
 const VRC_MAX = 2048;
+const WEBP_OPT = {
+  quality: 100,
+  lossless: true
+}
 
 class App{
   constructor(){
@@ -174,12 +178,12 @@ class App{
     const f_path = `${TMP_FOLDER}/${name}`;
 
     if(w < VRC_MAX && h < VRC_MAX){
-      await sharp(path).toFile(f_path);
+      await sharp(path).webp(WEBP_OPT).toFile(f_path);
     }else{
       if(w < h){
-        await sharp(path).resize(null, VRC_MAX).toFile(f_path);
+        await sharp(path).resize(null, VRC_MAX).webp(WEBP_OPT).toFile(f_path);
       }else{
-        await sharp(path).resize(VRC_MAX).toFile(f_path);
+        await sharp(path).resize(VRC_MAX).webp(WEBP_OPT).toFile(f_path);
       }
     }
 
