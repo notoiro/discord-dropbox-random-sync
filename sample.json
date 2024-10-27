@@ -1,0 +1,18 @@
+{
+  "DISCORD_TOKEN": "YOUR_TOKEN",
+  "DROPBOX": {
+    "CLIENT_ID": "YOUR_CLIENT_ID",
+    "CLIENT_SECRET": "YOUR_SECRET",
+    "REF_TOKEN": "GENERATE_get_ref_token.js"
+  },
+  "LINKLIST": [
+    {
+      "ID": "NANDEMO",
+      "DROPBOX_FOLDER_PATH": "share/sample",
+      "DROPBOX_IMAGE_COUNT": 1,
+      "CHANNELS": ["YOUR_CHANNEL_ID", "MIX"],
+      "GUILD": "COMMAND_GUILD"
+    }
+  ],
+  "TMP_FOLDER": "/tmp/"
+}
